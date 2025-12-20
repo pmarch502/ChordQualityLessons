@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Key Determiner</title>
+	<script src="KeyDeterminer.js"></script>
+	<script src="KeyDeterminer.test.js"></script>
+	<style>
+		table {
+			border-collapse: collapse;
+			width: 100%;
+		}
+
+		th, td {
+			border: 1px solid black;
+			padding: 4px;
+			text-align: left;
+		}
+
+		tr.failed {
+			background-color: rgba(255, 0, 0, .1);
+		}
+
+		tr.passed {
+			background-color: rgba(0, 255, 0, .1);
+		}
+</style>
+</head>
+<body>
+	<h1>Key Determiner</h1>
+	<button onclick="runKeyDeterminerTests()">Run KeyDeterminer Tests</button>
+	<div id="results"></div>
+</body>
+</html>
