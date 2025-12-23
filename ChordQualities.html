@@ -29,7 +29,14 @@
 		tr.preferred {
 			background-color: rgba(0, 255, 0, .1);
 		}
-</style>
+	</style>
+	<script>
+		function showAllChordQualities() {
+			const results = document.getElementById('results');
+			results.innerHTML = '';
+			results.innerHTML += ChordQualities.toHTMLString();
+		}
+	</script>
 </head>
 <body>
 	<h1>Chord Qualities</h1>
