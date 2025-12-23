@@ -1,4 +1,3 @@
-function runKeyDeterminerTests() {
 	const relativeMinors = {
 		'C': 'Am',
 		'G': 'Em',
@@ -16,11 +15,6 @@ function runKeyDeterminerTests() {
 		'Gb': 'Ebm',
 		'Cb': 'Abm',
 	};
-	const kd = new KeyDeterminer();
-	const results = document.getElementById('results');
-	results.innerHTML = '';
-	let passed = 0, total = 0;
-	let resultsStr = '<div>*** A "5" chord is a special case that is resolved to both the major and minor diatonic.</div>\n<table>\n<thead>\n<tr>\n<th>Song Name</th>\n<th>Determined Key</th>\n<th>Stated Key</th>\n<th>Result</th>\n<th>Diatonics</th>\n</tr>\n</thead>\n<tbody>\n';
 
 	const chordproContents = [
 "{title:Ain't No Grave}\n{key:Bm}\n{time:4/4}\n{tempo:74}\n\n\n\n{comment_italic:Technically Dorian (e.g. Bm = B Dorian) (in case you wanna rip massive lead solos)}\n\n\n\n{start_of_verse:Intro:AG only - until cue}\n|  [B5].  .  .  .  |\n{end_of_verse}\n\n\n\n{start_of_chorus:Chorus 1}\nThere ain't no [B5]grave gonna hold my body down\nThere ain't no [B5/E]grave gonna hold my body [B5]down\nWhen I [B5]hear that trumpet sound I'm gonna rise up outta the ground\nThere ain't no [B5/E]grave gonna hold my body [B5]down\n{end_of_chorus}\n\n\n\n{start_of_verse:Turn Around:Keys, EGs in - Quiet}\n|  [B5].  .  .  .  |\n{end_of_verse}\n\n\n\n{start_of_verse:Verse 1}\nOh, [B5]shame is a prison as cruel as a grave\n[B5]Shame is a robber and he's come to take my name\nOh, [B5]love is my redeemer, lifting me up from the ground\n[B5]Love is the power where my freedom song is found\n{end_of_verse}\n\n\n\n{start_of_chorus:Chorus 2:All in - Swamp music feel}\nThere ain't no [Bm]grave gonna hold my body down\nThere ain't no [E]grave gonna hold my body [Bm]down\nWhen I [Bm]hear that trumpet sound I'm gonna rise up outta the ground\nThere ain't no [E]grave gonna hold my [D]body [Bm]down\n{end_of_chorus}\n\n\n\n{start_of_chorus:Chorus 3:All in - Big - Pulse on 1/4s - Breakdown on last 'grave'}\nThere ain't no [Bm]grave could hold His body down\nThere ain't no [E]grave could hold His [D]body [Bm]down\nWhen He [Bm]heard the trumpet sound He rose up outta the ground\nThere ain't no [E]grave could hold His [D]body [Bm]down\n{end_of_chorus}",
@@ -169,22 +163,63 @@ function runKeyDeterminerTests() {
 "{title:Your Love Awakens Me}\n{key:C}\n{time:4/4}\n{tempo:101}\n\n\n\n{start_of_verse:Intro:EG + KB lick}\n| [C]. . . . | . . . . |\n{comment_italic:2X with the Ohs - skip last Oh }\n| [C]. . Oh . | . . [Dm]Oh . | [F]. . Oh . | . . [G]Oh . |\n{end_of_verse}\n\n\n\n{start_of_verse:Verse 1:AG out, drop by 50%}\n[C] There were walls between us, by the cross you came and\n[F]broke them down, you broke them down\n[C] There were chains around us, by your grace we are no\n[F]longer bound, no longer bound\n{end_of_verse}\n\n\n\n{start_of_verse:PreChorus 1:Silence on \"heart\"}\n[G] You called me out of the grave, you called me  [Am]into [G] the [F]light\n[F] You called my name and then my heart came alive [F/A]\n{end_of_verse}\n\n\n\n{start_of_chorus:Chorus 1:Play 2X - All in - Full}\n[C] Your love is greater, [F] Your love is stronger\n[Am] Your love awakens, a [G]wakens, a[F]wakens me\n{end_of_chorus}\n\n\n\n{start_of_verse:Interlude}\n| [C]. . Oh . | . . [Dm]Oh . | [F]. . Oh . | . . [G]Oh . |\n{end_of_verse}\n\n\n\n{start_of_verse:Verse 2:EG driving - All in but not full}\n[C] Feel the darkness shaking, all the dead are [Dm]coming\n[F]back to life, back to life [G]\n[C] Hear the song awaken, all creation [Dm]singing\n[F]\"We're alive, 'cause You're alive\"\n{end_of_verse}\n\n\n\n{start_of_verse:PreChorus 2}\n[G] You called me out of the grave, you called me  [Am]into [G] the [F]light\n[F] You called my name and then my  [F]heart [C/E]came [C]a[F]live [F/A]\n{end_of_verse}\n\n\n\n{chorus:Chorus 1:Play 2X - All in full}\n\n\n\n{start_of_verse:Interlude 1}\n| [C]. . . . |\n{end_of_verse}\n\n\n\n{start_of_bridge:Bridge 1A}\nAnd [F]what a love we've found, [C]death can't hold us [G/B]down\n[Am] We shout it out: \"[G]We're alive, 'cause You're alive\"\n{end_of_bridge}\n\n\n\n{start_of_bridge:Bridge 2:Play 2X}\nAnd [F]what a love we've found, [G] [C]death can't hold us [G/B]down\n[Am] We shout it out: \"[G]We're alive, 'cause You're alive\"\n{end_of_bridge}\n\n\n\n{start_of_verse:Interlude 2:Pull back}\n| [C]. . . . | . . . . |\n(live...)\n{end_of_verse}\n\n\n\n{start_of_chorus:Chorus 2:EG palm mutes, Keys, Bass}\n[C] Your love is greater, Your love is stronger\n[F] Your love awakens, awakens, awakens me\n{end_of_chorus}\n\n\n\n{start_of_chorus:Chorus 3:All in - Build to full - Silence on \"awakens me\"}\n[C] Your love is greater, [Dm] Your love is stronger\n[F] Your love awakens, a [F]wa[C/E]kens, [C] awakens me\n{end_of_chorus}\n\n\n\n{chorus:Chorus 1:Play 2X - All in - Full}\n\n\n\n{start_of_verse:Tag}\n[C] Your love a [Dm]wakens [F]me [G]\n    (Ohs...)\n{end_of_verse}\n\n\n\n{start_of_chorus:Chorus 4}\n[C] Your love is greater, Your love is  [Dm]stronger\n[F] Your love awakens, awakens, a [G]wakens me\n{end_of_chorus}\n\n\n\n{start_of_verse:Outro:Drop to only EG + Kick}\n| [C]. . . . | [C]. . . . | [C]. . . . | [C]. . . . |\n{end_of_verse}"
 ];
 
+function runKeyDeterminerTests() {
+	const results = document.getElementById('results');
+	results.innerHTML = '';
+	let passed = 0, total = 0;
+	let resultsStr = '<div>*** A "5" chord is a special case that is resolved to both the major and minor diatonic.</div>\n<table>\n<thead>\n<tr>\n<th>Song Name</th>\n<th>Determined Key</th>\n<th>Stated Key</th>\n<th>Result</th>\n<th>Diatonics</th>\n<th>Counts</th>\n</tr>\n</thead>\n<tbody>\n';
+
 	for(let i = 0; i < chordproContents.length; i++) {
 		let songContent = chordproContents[i];
-		let determinedKey = kd.getSongKey(songContent);
+		let determinedInfo = KeyDeterminer.determineKey(songContent);
+		let determinedKey = determinedInfo["maxScoreKey"];
 		let start = songContent.indexOf('{title:');
 		let end = songContent.indexOf('}', start + 1);
 		let songName = songContent.substring(start + 7, end).trim();
 		start = songContent.indexOf('{key:');
 		end = songContent.indexOf('}', start + 1);
-		let statedKey = songContent.substring(start + 5, end).trim();
+		let statedKey = songContent.substring(start + 5, end).trim().replace(/#/g, '♯').replace(/b/g, '♭');
 		let result = '';
 		total++;
 		if(statedKey === determinedKey || statedKey === relativeMinors[determinedKey]) {
 			passed++;
-			resultsStr += '<tr class="passed">\n<td>' + songName + '</td>\n<td>' + determinedKey + '</td>\n<td>' + statedKey + '</td>\n<td>PASSED</td>\n<td>' + kd.convertChordsToDiatonics(kd.extractChords(songContent)) + '</td>\n</tr>\n';
+			resultsStr += '<tr class="passed">\n<td>' + songName + '</td>\n<td>' + determinedKey + '</td>\n<td>' + statedKey + '</td>\n<td>PASSED</td>\n<td>' + determinedInfo["diatonicsArray"] + '</td>\n<td>' + JSON.stringify(determinedInfo["maxDiatonicOccurrences"]) + '</td>\n</tr>\n';
 		} else {
-			resultsStr += '<tr class="failed">\n<td>' + songName + '</td>\n<td>' + determinedKey + '</td>\n<td>' + statedKey + '</td>\n<td>FAILED</td>\n<td>' + kd.convertChordsToDiatonics(kd.extractChords(songContent)) + '</td>\n</tr>\n';
+			resultsStr += '<tr class="failed">\n<td>' + songName + '</td>\n<td>' + determinedKey + '</td>\n<td>' + statedKey + '</td>\n<td>FAILED</td>\n<td>' + determinedInfo["diatonicsArray"] + '</td>\n<td>' + JSON.stringify(determinedInfo["maxDiatonicOccurrences"]) + '</td>\n</tr>\n';
+		}
+	}
+	
+	resultsStr += '</tbody>\n</table>\n';
+	results.innerHTML = `<br><strong>${passed}/${total} tests passed</strong>\n` + resultsStr;
+}
+
+function runKeyDeterminerTestForSong() {
+	const targetSongTitle = document.getElementById('targetSongTitle').value;
+	const results = document.getElementById('results');
+	results.innerHTML = '';
+	let passed = 0, total = 0;
+	let resultsStr = '<div>*** A "5" chord is a special case that is resolved to both the major and minor diatonic.</div>\n<table>\n<thead>\n<tr>\n<th>Song Name</th>\n<th>Determined Key</th>\n<th>Stated Key</th>\n<th>Result</th>\n<th>Diatonics</th>\n<th>Counts</th>\n</tr>\n</thead>\n<tbody>\n';
+
+	for(let i = 0; i < chordproContents.length; i++) {
+		let songContent = chordproContents[i];
+		let start = songContent.indexOf('{title:');
+		let end = songContent.indexOf('}', start + 1);
+		let songName = songContent.substring(start + 7, end).trim();
+		if(songName !== targetSongTitle) {
+			continue;
+		}
+		start = songContent.indexOf('{key:');
+		end = songContent.indexOf('}', start + 1);
+		let statedKey = songContent.substring(start + 5, end).trim().replace(/#/g, '♯').replace(/b/g, '♭');
+		let determinedInfo = KeyDeterminer.determineKey(songContent);
+		let determinedKey = determinedInfo["maxScoreKey"];
+		let result = '';
+		total++;
+		if(statedKey === determinedKey || statedKey === relativeMinors[determinedKey]) {
+			passed++;
+			resultsStr += '<tr class="passed">\n<td>' + songName + '</td>\n<td>' + determinedKey + '</td>\n<td>' + statedKey + '</td>\n<td>PASSED</td>\n<td>' + determinedInfo["diatonicsArray"] + '</td>\n<td>' + JSON.stringify(determinedInfo["maxDiatonicOccurrences"]) + '</td>\n</tr>\n';
+		} else {
+			resultsStr += '<tr class="failed">\n<td>' + songName + '</td>\n<td>' + determinedKey + '</td>\n<td>' + statedKey + '</td>\n<td>FAILED</td>\n<td>' + determinedInfo["diatonicsArray"] + '</td>\n<td>' + JSON.stringify(determinedInfo["maxDiatonicOccurrences"]) + '</td>\n</tr>\n';
 		}
 	}
 	
