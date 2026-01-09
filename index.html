@@ -3,53 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chord Qualities Mastery - Phase 1: Foundations</title>
+    <title>Chord Qualities Mastery</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 1200px; margin: 0 auto; padding: 20px; background: linear-gradient(to bottom, #f8f9ff, #e8f4ff); color: #333; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 1400px; margin: 0 auto; padding: 20px; background: linear-gradient(to bottom, #f8f9ff, #e8f4ff); color: #333; }
         header { text-align: center; padding: 40px 0; background: #4a90e2; color: white; border-radius: 10px; margin-bottom: 30px; }
         h1 { margin: 0; font-size: 2.5em; }
-        nav { position: sticky; top: 20px; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); float: left; width: 300px; height: fit-content; }
+        nav { position: sticky; top: 20px; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); float: left; width: 300px; height: fit-content; overflow-y: auto; max-height: 80vh; }
+        nav h2 { margin-top: 0; color: #4a90e2; }
+        nav h3 { margin-bottom: 10px; color: #666; }
+        #search-input { width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; }
         nav ul { list-style: none; padding: 0; }
-        nav li { margin: 10px 0; }
-        nav a { display: block; padding: 12px 16px; background: #fff; color: #4a90e2; text-decoration: none; border-radius: 6px; transition: background 0.3s; font-weight: 500; }
+        nav li { margin: 5px 0; }
+        nav a { display: block; padding: 10px 14px; background: #f0f8ff; color: #4a90e2; text-decoration: none; border-radius: 6px; transition: all 0.3s; font-weight: 500; cursor: pointer; }
         nav a:hover { background: #4a90e2; color: white; }
-        main { margin-left: 340px; padding: 20px 0; }
-        .intro { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-bottom: 30px; }
+        nav a.active { background: #4a90e2 !important; color: white; }
+        nav a.completed { background: #d4edda; color: #155724; }
+        nav a.completed:hover { background: #28a745; color: white; }
+        main { margin-left: 340px; padding: 20px 0; min-height: 70vh; }
+        #lesson-content { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); opacity: 0; transition: opacity 0.5s; }
+        #lesson-content.loaded { opacity: 1; }
+        #progress { background: #e3f2fd; padding: 15px; border-radius: 6px; margin-bottom: 20px; text-align: center; font-weight: bold; }
+        .phase { margin-bottom: 20px; border-left: 3px solid #4a90e2; padding-left: 10px; }
         footer { text-align: center; padding: 20px; color: #666; clear: both; }
-        @media (max-width: 768px) { nav { float: none; width: auto; position: static; } main { margin-left: 0; } }
+        @media (max-width: 768px) { nav { float: none; width: auto; position: static; max-height: none; } main { margin-left: 0; } }
+        summary { cursor: pointer; font-weight: bold; color: #4a90e2; }
     </style>
 </head>
 <body>
     <header>
         <h1>🎹 Chord Qualities Mastery</h1>
-        <p>Phase 1: Foundations - Notes, Scales & Keys</p>
+        <p>Granular Lessons for Worship Team: One Concept Per Lesson</p>
     </header>
     <nav>
-        <h2>Lessons</h2>
-        <ul>
-            <li><a href="Lesson 1.html">1. Notes A-G</a></li>
-            <li><a href="Lesson 2.html">2. Sharps & Flats</a></li>
-            <li><a href="Lesson 3.html">3. Octaves</a></li>
-            <li><a href="Lesson 4.html">4. Whole/Half Steps</a></li>
-            <li><a href="Lesson 5.html">5. Major Scale Formula</a></li>
-            <li><a href="Lesson 6.html">6. What is a Key?</a></li>
-            <li><a href="Lesson 7.html">7. Circle of Fifths - Sharps</a></li>
-            <li><a href="Lesson 8.html">8. Circle of Fifths - Flats</a></li>
-            <li><a href="plan.html">📋 Phase Plan</a></li>
-        </ul>
-        <h3>Progress</h3>
-        <p>8/8 Lessons Complete</p>
+        <h2>Progress</h2>
+        <div id="progress">Loading...</div>
+        <h3>Search Lessons</h3>
+        <input type="search" id="search-input" placeholder="Search lessons (e.g., triad)...">
+        <h2>Phases</h2>
+        <div class="phase">
+            <details open>
+                <summary>Phase 1: Foundations (Notes, Scales, Keys)</summary>
+                <ul id="phase1-lessons"></ul>
+            </details>
+        </div>
+        <div class="phase">
+            <details open>
+                <summary>Phase 2: Basic Triads</summary>
+                <ul id="phase2-lessons"></ul>
+            </details>
+        </div>
+        <div class="phase">
+            <details>
+                <summary>Phase 3+: Coming Soon (Inversions, 7ths...)</summary>
+                <ul><li>Stay tuned!</li></ul>
+            </details>
+        </div>
+        <a onclick="window.open('plan.html')">📋 Full Plan</a>
     </nav>
     <main>
-        <div class="intro">
-            <h2>Welcome to Phase 1</h2>
-            <p>Build note literacy before chords. One concept per lesson: Start with review, learn new idea, practice hands-on, apply to worship.</p>
-            <p><strong>Pro Tip:</strong> Use a keyboard/piano. Feel the "home" note in scales!</p>
+        <div id="lesson-content">
+            <h2>Welcome to Chord Mastery!</h2>
+            <p>Click a lesson in the sidebar to load. Static left nav always visible. Progress tracks viewed lessons.</p>
+            <p><em>Pro Tip:</em> Bookmark favorites. Print charts from lessons.</p>
         </div>
-        <p>Click a lesson to begin. Mastery check at end of each.</p>
     </main>
     <footer>
-        <p>&copy; 2025 Chord Qualities | Next: Phase 2 Triads</p>
+        <p>© 2026 Chord Qualities | <button onclick="window.print()">🖨️ Print Current</button> | <a href="test.html">Dev Tools</a></p>
     </footer>
+    <script>
+        const lessons = {
+            1: { title: 'Notes A-G', phase: 1 },
+            2: { title: 'Sharps & Flats', phase: 1 },
+            3: { title: 'Octaves', phase: 1 },
+            4: { title: 'Whole/Half Steps', phase: 1 },
+            5: { title: 'Major Scale Formula', phase: 1 },
+            6: { title: 'What is a Key?', phase: 1 },
+            7: { title: 'Circle of Fifths - Sharps', phase: 1 },
+            8: { title: 'Circle of Fifths - Flats', phase: 1 },
+            9: { title: 'Chord = Stacked Thirds', phase: 2 },
+            10: { title: 'Major Triad', phase: 2 },
+            11: { title: 'Minor Triad', phase: 2 },
+            12: { title: 'Triads in C Key', phase: 2 },
+            13: { title: 'Triads in G Key', phase: 2 },
+            14: { title: 'Diminished Triad', phase: 2 },
+            15: { title: 'Augmented Triad', phase: 2 },
+            16: { title: 'Triads Review', phase: 2 }
+        };
+
+        function getLessonPath(num) {
+            const phase = Math.ceil(num / 8);
+            return `./Phase${phase}/html/Lesson ${num}.html`;
+        }
+
+        function populateNav() {
+            ['phase1-lessons', 'phase2-lessons'].forEach(ulId => {
+                const ul = document.getElementById(ulId);
+                const start = ulId === 'phase1-lessons' ? 1 : 9;
+                const end = start + 7;
+                for (let i = start; i <= end; i++) {
+                    const li = document.createElement('li');
+                    const a = document.createElement('a');
+                    a.dataset.num = i;
+                    a.textContent = `${i}. ${lessons[i].title}`;
+                    a.onclick = () => loadLesson(i);
+                    li.appendChild(a);
+                    ul.appendChild(li);
+                }
+            });
+            updateProgress();
+        }
+
+        async function loadLesson(num) {
+            const path = getLessonPath(num);
+            const content = document.getElementById('lesson-content');
+            content.classList.remove('loaded');
+            content.innerHTML = '<p>Loading lesson...</p>';
+            try {
+                const response = await fetch(path);
+                if (!response.ok) throw new Error('Not found');
+                content.innerHTML = await response.text();
+                content.classList.add('loaded');
+                markViewed(num);
+                updateActiveLink(num);
+                updateProgress();
+                window.scrollTo(0, 0);
+            } catch (e) {
+                content.innerHTML = `<p>Error loading ${lessons[num].title}. <a href="${path}" target="_blank">Open directly?</a></p>`;
+            }
+        }
+
+        function markViewed(num) {
+            let viewed = JSON.parse(localStorage.getItem('viewedLessons') || '[]');
+            if (!viewed.includes(num)) {
+                viewed.push(num);
+                localStorage.setItem('viewedLessons', JSON.stringify(viewed));
+            }
+        }
+
+        function updateProgress() {
+            const viewed = JSON.parse(localStorage.getItem('viewedLessons') || '[]');
+            const phase1Viewed = viewed.filter(n => n <= 8).length;
+            const phase2Viewed = viewed.filter(n => n > 8).length;
+            document.getElementById('progress').innerHTML = 
+                `Phase 1: ${phase1Viewed}/8 | Phase 2: ${phase2Viewed}/8 | Overall: ${Math.round((viewed.length / 16) * 100)}%`;
+            document.querySelectorAll('nav a[data-num]').forEach(a => {
+                if (viewed.includes(parseInt(a.dataset.num))) a.classList.add('completed');
+            });
+        }
+
+        function updateActiveLink(num) {
+            document.querySelectorAll('nav a.active')?.forEach(a => a.classList.remove('active'));
+            document.querySelector(`nav a[data-num="${num}"]`)?.classList.add('active');
+        }
+
+        function filterLessons(query) {
+            const links = document.querySelectorAll('nav li a[data-num]');
+            links.forEach(a => {
+                a.parentElement.style.display = a.textContent.toLowerCase().includes(query.toLowerCase()) ? '' : 'none';
+            });
+        }
+
+        // Init
+        window.addEventListener('DOMContentLoaded', () => {
+            populateNav();
+            document.getElementById('search-input').oninput = (e) => filterLessons(e.target.value);
+            updateProgress();
+        });
+    </script>
 </body>
 </html>
