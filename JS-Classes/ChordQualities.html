@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Chord Qualities</title>
+	<script src="ChordQualities.js"></script>
+	<script src="ChordQualities.test.js"></script>
+	<style>
+		table {
+			border-collapse: collapse;
+			width: 100%;
+		}
+
+		th, td {
+			border: 1px solid black;
+			padding: 4px;
+			text-align: left;
+		}
+
+		td.alternative {
+			padding-left: 35px;
+		}
+
+		tr.alternative {
+			background-color: rgba(255, 0, 0, .1);
+		}
+
+		tr.preferred {
+			background-color: rgba(0, 255, 0, .1);
+		}
+	</style>
+	<script>
+		function showAllChordQualities() {
+			const results = document.getElementById('results');
+			results.innerHTML = '';
+			results.innerHTML += ChordQualities.toHTMLString();
+		}
+	</script>
+</head>
+<body>
+	<h1>Chord Qualities</h1>
+	<button onclick="showAllChordQualities()">Show All Chord Qualities</button>
+	<button onclick="runChordQualitiesTests()">Run ChordQualities Tests</button>
+	<div id="results"></div>
+</body>
+</html>
