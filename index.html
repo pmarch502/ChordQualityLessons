@@ -6,7 +6,7 @@
     <title>Chord Qualities Mastery</title>
     <style>
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 1400px; margin: 0 auto; padding: 20px; background: linear-gradient(to bottom, #f8f9ff, #e8f4ff); color: #333; }
-        header { text-align: center; padding: 40px 0; background: #4a90e2; color: white; border-radius: 10px; margin-bottom: 30px; }
+        header { text-align: center; padding: 20px 0; background: #4a90e2; color: white; border-radius: 10px; margin-bottom: 20px; }
         h1 { margin: 0; font-size: 2.5em; }
         nav { position: sticky; top: 20px; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); float: left; width: 300px; height: fit-content; overflow-y: auto; max-height: 80vh; }
         nav h2 { margin-top: 0; color: #4a90e2; }
@@ -68,26 +68,26 @@
         </div>
     </main>
     <footer>
-        <p>© 2026 Chord Qualities | <button onclick="window.print()">🖨️ Print Current</button> | <a href="test.html">Dev Tools</a></p>
+        <p>© 2026 Chord Qualities | <button onclick="window.print()">🖨️ Print Current</button></p>
     </footer>
     <script>
         const lessons = {
             1: { title: 'Notes A-G', phase: 1 },
-            2: { title: 'Sharps & Flats', phase: 1 },
+            2: { title: 'Sharps and Flats', phase: 1 },
             3: { title: 'Octaves', phase: 1 },
-            4: { title: 'Whole/Half Steps', phase: 1 },
-            5: { title: 'Major Scale Formula', phase: 1 },
+            4: { title: 'Intervals - Whole/Half Steps', phase: 1 },
+            5: { title: 'The Major Scale Formula', phase: 1 },
             6: { title: 'What is a Key?', phase: 1 },
             7: { title: 'Circle of Fifths - Sharps', phase: 1 },
             8: { title: 'Circle of Fifths - Flats', phase: 1 },
-            9: { title: 'Chord = Stacked Thirds', phase: 2 },
+            9: { title: 'What is a Chord?', phase: 2 },
             10: { title: 'Major Triad', phase: 2 },
             11: { title: 'Minor Triad', phase: 2 },
-            12: { title: 'Triads in C Key', phase: 2 },
-            13: { title: 'Triads in G Key', phase: 2 },
-            14: { title: 'Diminished Triad', phase: 2 },
-            15: { title: 'Augmented Triad', phase: 2 },
-            16: { title: 'Triads Review', phase: 2 }
+            12: { title: 'Diminished Triad', phase: 2 },
+            13: { title: 'The Triads in a Key', phase: 2 },
+            14: { title: 'Augmented Triad', phase: 2 },
+            15: { title: 'Suspended 4 Triad', phase: 2 },
+            16: { title: 'Suspended 2 Triad', phase: 2 }
         };
 
         function getLessonPath(num) {
