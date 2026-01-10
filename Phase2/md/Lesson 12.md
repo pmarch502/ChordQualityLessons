@@ -10,6 +10,7 @@ Here's the technical bit. The actual diminished triad formula is defined as:
 One more time, this definition is very important because it is very precise - it has an important purpose in defining and naming chords. But, for us and for now, we'll just keep thinking of it as the stacked thirds.
 
 ```
+1   2   3   4   5   6   7   8   9   10  11  12  13  14  15
 C   D   E   F   G   A   B   C   D   E   F   G   A   B   C
                         ^       ^       ^
 ```
@@ -20,6 +21,8 @@ B diminished: B - D - F
 ```
 
 When a diminished triad appears on a chord chart, it may appear with various chord quality decorations: Cdim, C°
+
+When we talk about a diminished triad according to scale degrees, we would call it a 1-♭3-♭5 (or, 1-3♭-5♭ - people say it both ways). (Remember - these numbers are scale degrees from the major scale of the root of the chord.)
 
 
 

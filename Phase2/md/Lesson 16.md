@@ -18,6 +18,8 @@ C   D   E   F   G   A   B   C
 ```
 When a suspended 2 triad appears on a chord chart, it may appear with various chord quality decorations: Csus2, C2
 
+When we talk about a suspended 2 triad according to scale degrees, we would call it a 1-2-5. (Remember - these numbers are scale degrees from the major scale of the root of the chord.)
+
 
 
 ### Definitions

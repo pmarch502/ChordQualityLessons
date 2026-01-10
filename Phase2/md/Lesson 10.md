@@ -10,16 +10,19 @@ Let's get technical for a moment. The actual major triad formula is defined as:
 This definition is very important because it is very precise - it has an important purpose in defining and naming chords. But, for us and for now, we'll just keep thinking of it as the stacked thirds.
 
 ```
+1   2   3   4   5   6   7   8
 C   D   E   F   G   A   B   C
 ^       ^       ^
 ```
-If you were playing a song in the key of C, you would find that these minor triads were very common:
+If you were playing a song in the key of C, you would find that these major triads were very common:
 ```
 C major: C - E - G
 F major: F - A - C
 G major: G - B - D
 ```
 When a major triad appears on a chord chart, it may appear with various chord quality decorations: C, CMaj, Cmaj, CM
+
+When we talk about chords, we sometimes refer to them by scale degrees. We would call a major triad a 1-3-5. (There is something tricky about this. Those numbers are scale degrees from the major scale of the root of the chord - **not** the key/scale the song is in.)
 
 
 ### Definitions

@@ -12,11 +12,14 @@ Here is one example of an augmented triad:
 ```
 C augmented: C - E - G♯
 
+1   2   3   4   5   6   7   8
 C   D   E   F   G   A   B   C
 ^       ^       ♯
 ```
 
 When an augmented triad appears on a chord chart, it may appear with various chord quality decorations: Caug, C+, C+5
+
+When we talk about an augmented triad according to scale degrees, we would call it a 1-3-5♯ (or, 1-3-5♯ - people say it both ways). (Remember - these numbers are scale degrees from the major scale of the root of the chord.)
 
 
 

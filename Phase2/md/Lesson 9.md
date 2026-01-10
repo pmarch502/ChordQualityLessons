@@ -6,11 +6,12 @@ It is common for people to talk about "singing harmony". What they usually mean 
 
 We rarely think of the chords that make up a song as harmony. If two guitar players are talking on stage about a new song, you will probably hear one of them say, "what are the chords?" You probably won't hear one of them say, "what's the harmony?" We don't need to change the way we talk, but we do need to recognize that the chords of a song are true and classic harmony.
 
-But, we're still left with our question - what is a chord? A chord is simply a group of notes played together. Specifically, we're going to focus on **triads**, which are chords made of **three notes stacked in thirds**. Wow, that escalated quickly. (For what it's worth, two notes (the infamous power chord or a 5, e.g. C5) is technically just an interval or dyad.)
+But, we're still left with our question - what is a chord? A chord is simply a group of notes played together. Specifically, we're going to (first) focus on **triads**, which are chords made of **three notes stacked in thirds**. Wow, that escalated quickly. (For what it's worth, two notes (the infamous power chord or a 5, e.g. C5) is technically just an interval or dyad.)
 
 What does "stacked in thirds" mean? Let's go back to our C major scale. If you start from any note (we'll call that the chord's root and how we'll name the chord), you skip every other note in the scale to build up a triad. Here's that C major scale with some notes highlighted:
 
 ```
+1   2   3   4   5   6   7   8
 C   D   E   F   G   A   B   C
 ^       ^       ^
 ```
@@ -18,6 +19,7 @@ C   D   E   F   G   A   B   C
 Start on C (the root). Skip D to land on E (a third from C). Skip F to land on G (a third from E). Boom—that's a C triad: **C - E - G**.
 
 ```
+1   2   3   4   5   6   7   8
 C   D   E   F   G   A   B   C
     ^       ^       ^
 ```
